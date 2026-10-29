@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f2ea">
+    <title>Dorm Marketplace — good finds, close by</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Dorm Market home">
+        <span class="brand-mark" aria-hidden="true">D</span>
+        <span>Dorm<span class="brand-light">Market</span></span>
+      </a>
+      <span class="topbar-note"><span class="live-dot"></span> Your campus, in good company</span>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">THE CAMPUS EXCHANGE</p>
+          <h1 id="page-title">Good finds.<br><span>Just down the hall.</span></h1>
+          <p class="hero-description">Pass along the things that made campus life better. Find your next favorite, then meet up and make it yours.</p>
+        </div>
+        <div class="hero-sticker" aria-label="Keep good things in circulation">
+          <span aria-hidden="true">↗</span>
+          <p>Good things<br>keep going.</p>
+        </div>
+      </section>
+
+      <section class="dashboard" aria-label="Marketplace">
+        <div class="market-column">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">FRESH FROM CAMPUS</p>
+              <h2>Find your next thing</h2>
+            </div>
+            <div class="market-stats" aria-label="Marketplace item counts">
+              <span><strong id="available-count">0</strong> available</span>
+              <span><strong id="claimed-count">0</strong> reserved</span>
+              <span><strong id="sold-count">0</strong> completed</span>
+            </div>
+          </div>
+          <div class="identity-panel">
+            <label for="student-name">You’re browsing as</label>
+            <input id="student-name" name="studentName" type="text" minlength="2" maxlength="40" autocomplete="name" placeholder="Your name" required>
+            <span>Use the same name to manage your listings or confirm your pickup.</span>
+          </div>
+          <p id="notice" class="notice" role="status" aria-live="polite" hidden></p>
+          <div id="listings" class="listing-grid" aria-label="Campus listings"></div>
+        </div>
+
+        <aside class="create-panel" aria-labelledby="create-title">
+          <div class="create-icon" aria-hidden="true">+</div>
+          <p class="eyebrow">PASS IT ON</p>
+          <h2 id="create-title">List a good thing</h2>
+          <p class="create-intro">Clear out your room. Help someone down the hall. It starts with a listing.</p>
+          <form id="listing-form">
+            <label for="item-title">What are you passing on?</label>
+            <input id="item-title" name="title" type="text" minlength="2" maxlength="80" placeholder="e.g. Mini fridge, barely used" required>
+            <label for="item-category">Pick a category</label>
+            <select id="item-category" name="category" required>
+              <option value="Books">Books</option>
+              <option value="Furniture">Furniture</option>
+              <option value="Electronics">Electronics</option>
+              <option value="Bikes">Bikes</option>
+              <option value="Home">Home</option>
+              <option value="Other">Other</option>
+            </select>
+            <label for="item-description">A few details <span>(optional)</span></label>
+            <textarea id="item-description" name="description" rows="3" maxlength="500" placeholder="Condition, what's included, anything useful to know..."></textarea>
+            <button class="button button-dark button-full" type="submit">Post your listing <span aria-hidden="true">↗</span></button>
+          </form>
+          <p class="pickup-note"><span aria-hidden="true">✳</span> No payments, no shipping. Just a friendly campus handoff.</p>
+        </aside>
+      </section>
+    </main>
+
+    <footer>
+      <span>Made for campus life.</span>
+      <span>Trade kindly. Meet somewhere public.</span>
+    </footer>
+  </body>
+</html>
