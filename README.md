@@ -18,6 +18,10 @@ Run the automated workflow and collision tests with:
 npm test
 ```
 
+## Demo
+
+The [4-minute-27-second narrated walkthrough](./demo/Dorm-Marketplace-Demo.mp4) covers the MVP, scope cuts, claim criteria, real-world scenarios, and prototype limitations. It is an original slide-based demo with synthetic narration.
+
 ## Product and behavior
 
 The [PRD](./PRD.md) defines the three MVP features, three explicit scope cuts, and the claim-flow acceptance criteria. A successful claim reserves an item for 60 seconds. The browser refreshes the board regularly, while the server also reconciles expired claims before handling marketplace requests. The claimant can confirm pickup to complete the listing; its seller can mark it sold at any point, including while it is reserved.
